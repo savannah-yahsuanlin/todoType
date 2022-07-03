@@ -33,7 +33,6 @@ router.post('/', async (request, response, next) => {
 router.delete('/:id', async(request, response, next) => {
 	try {
 		const { id }= request.params
-		socketServer().emit('deleteTodo', id)
 		response.send(await deleteTodo(id))
 	} catch (err) {
 		next(err)

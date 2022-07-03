@@ -48,8 +48,7 @@ export const deleteTodo = async(id:string): Promise<DeleteResult | undefined> =>
 				.createQueryBuilder()
 				.delete()
 				.from(Todo)
-				.where({ id:id })
-				.returning('*')
+				.where({ id })
 				.execute()
     return deleted
 	} catch (error) {
