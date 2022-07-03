@@ -1,7 +1,7 @@
 
-# Todo
+# Real-Time Todo TypeScript
 
-## Setup
+### Setup
 
 * cd client `npm install`
 * `npm run start:dev`
