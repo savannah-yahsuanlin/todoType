@@ -16,16 +16,4 @@ export const AxiosHttpRequest = async (method: string, url: string, data?: objec
   }
 }
 
-
-
-//export const getTodo = (setTodo: any): void => {
-//  AxiosHttpRequest('GET', `${API_URL}/todo`)
-//    .then((response) => {
-//      setTodo(response?.data)
-//    })
-//    .catch(ex => {
-//      console.log(ex)
-//    })
-//}
-
 export const API_URL = 'http://localhost:3000'
