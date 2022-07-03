@@ -48,7 +48,7 @@ input[type='text']:focus {
 
 .list {
 	display: flex;
-	width: 150px;
+	width: 300px;
 	align-self: center;
 	align-items: center;
 	justify-content: space-between;

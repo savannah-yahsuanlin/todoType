@@ -57,7 +57,7 @@ const App = () => {
 
   const deleteTodo = async (id: string) => {
     try {
-      await AxiosHttpRequest("DELETE", `${API_URL}/${id}`);
+      await AxiosHttpRequest("DELETE", `${API_URL}/todo/${id}`);
       const temp = todo.filter((x: any) => x.id !== id);
       setTodo(temp);
     } catch (error) {
