@@ -1,16 +1,15 @@
 import express, { Request, Response, NextFunction } from 'express';
-import { config } from 'dotenv'
 import { Todo } from './models/Todo'
 import { createConnection } from 'typeorm';
 import todoRouter from './routes/todo';
 import { addTodo} from './controller/todoController'
 const router = express.Router()
 
-config()
+//config()
 const app = express();
 const io = require("socket.io");
 
-//app.use(cors)
+
 app.use(express.json());
 
 app.get('/', (_, res) => {
