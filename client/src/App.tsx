@@ -22,7 +22,6 @@ const App = () => {
 	const [todo, setTodo]: any = useState([]);
 	const [name, setName] = useState('');
 	const [isAllSet, setAllSet] = useState(false);
-console.log(todo, setTodo)
 	const disabled = (name.length === 0);
 
 	useEffect(() => {
@@ -40,7 +39,6 @@ console.log(todo, setTodo)
 				const newTodo = (await AxiosHttpRequest('POST', `${API_URL}/todo`, { name }))?.data.raw[0]
 				socket.emit('addTodo', {name: newTodo.name})
 				setTodo([...todo, newTodo]);
-				socket.on('getAllTodo', (todo) => setTodo(todo));
 				setName('')
 			}
 		} catch (error) {
