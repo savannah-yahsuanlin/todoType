@@ -1,6 +1,4 @@
 
-# Real-Time Todo TypeScript
-
 ### Setup
 
 * cd client `npm install`
