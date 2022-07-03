@@ -51,7 +51,7 @@ router.put('/:id/updated', async(request, response, next) => {
 
 router.put('/:id/updated/done', async(request, response, next) => {
 	try {
-		const { id } = request.body.todo.id
+		const id = request.body.todo.id
 		const { isDone} = request.body
 		const updatedDone = await isComplete({ id }, isDone)
 		socketServer().emit('updatedDone', { id, isDone })

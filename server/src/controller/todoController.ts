@@ -59,7 +59,6 @@ export const deleteTodo = async(id:string): Promise<DeleteResult | undefined> =>
 export const updateTodo = async (id: string, name: string, isDone: boolean): Promise<UpdateResult | undefined> => {
   try {
     const updated = await getConnection()
-      .getRepository(Todo)
       .createQueryBuilder()
       .update(Todo)
 			.set({name, isDone})
