@@ -18,7 +18,7 @@ socket.on("connect", () => {
   console.log("Connected! ID: " + socket.id);
 });
 
-const App = () => {
+const App: React.FC = () => {
   const [todo, setTodo]: any = useState([]);
   const [name, setName] = useState("");
   const [isAllSet, setAllSet] = useState(false);
@@ -45,6 +45,7 @@ const App = () => {
       console.log(error);
     }
   };
+
 
   const getTodo = async () => {
     try {
@@ -82,7 +83,6 @@ const App = () => {
         return (
           <ul key={ele.id} style={{ fontSize: "22px" }}>
             <span className="list">
-              <input type="checkbox" name="checkbox" />
               {ele.name}
               <button className="remove" onClick={() => deleteTodo(ele.id)}>
                 X
