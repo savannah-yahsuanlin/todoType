@@ -42,12 +42,13 @@ export const addTodo = async({id, name, isDone}:TokenBody): Promise<InsertResult
 	}
 }
 
-export const deleteTodo = async(id?:string): Promise<DeleteResult | undefined> => {
+export const deleteTodo = async(id:string): Promise<DeleteResult | undefined> => {
 	try {
 		const deleted = await getConnection()
 				.createQueryBuilder()
 				.delete()
-				.where({ id })
+				.from(Todo)
+				.where({ id:id })
 				.returning('*')
 				.execute()
     return deleted
