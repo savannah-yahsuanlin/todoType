@@ -1,6 +1,8 @@
 
 ### Setup
 
+Real-time todo list in typescript
+
 * cd client `npm install`
 * `npm run start:dev`
 
